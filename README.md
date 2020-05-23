@@ -7,9 +7,9 @@ This project involves retrieving data from another application's API and using i
 During this project, I learned how to use AJAX and make API calls using an API token.
 
 ## Tools Used
-*[Bootstrap](https://getbootstrap.com)
-*[OpenWeatherMapAPI](https://openweathermap.org/api)
-*Chrome's Dev Tools
+* [Bootstrap](https://getbootstrap.com)
+* [OpenWeatherMapAPI](https://openweathermap.org/api)
+* Chrome's Dev Tools
 
 ## Sites used for reference
 *[CSS-Tricks](https://css-tricks.com/)
