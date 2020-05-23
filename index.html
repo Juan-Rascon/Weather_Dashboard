@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>    
+   
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <div style="height: 100px;" class="container">
+        <!-- Content here -->
+        <div class="row">
+            <div class="col text-center text-light p-2 bg-dark">
+                <h1>Weather Dashboard</h1>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light">
+               <div class= "container">
+                <div class ="row">
+                    <div class="col text-left mt-2 p-0">
+                        <h5>Search for a City:</h5>
+                    </div>
+                </div>
+                <div class ="row">
+                       <div class="col">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="City" aria-label="Search City" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                <button class="btn btn-outline-secondary bg-primary text-white" type="button" id="button-addon2"><i class="fas fa-search "></i></button>
+                                </div>
+                            </div>
+                       </div>
+                </div>
+                <div class ="d-flex flex-column" id="recentSearches">
+                </div>
+                </div>
+            </div>
+            <div class="col-9">
+               <div class= "container">
+                   <div class ="row">
+                        <div class="col border pb-3 mt-4 mb-2">
+                            <p><h2><span id="mainCity"></span><span><img id="mainIcon" src="" alt="weather icon"></h2></p>
+                            <p>Temperature: <span id="mainTemp"></span><span> &degF</span></p>
+                            <p>Humidity: <span id="mainHum"></span><span>%</span></p>
+                            <p>Wind Speed: <span id="mainWS"></span><span> MPH</span></p>
+                            <p>UV Index: <span class ="p-1 text-white rounded" id="mainUVI" style="display:box"></span></p>
+                        </div>
+                   </div>
+                   <div class ="row">
+                        <div class="col p-0">
+                        <div class = "container p-0">
+                        <div class ="row">
+                            <div class = "col ">
+                            <p><h2>5-Day Forecast:</h2></p>
+                            </div>
+                        </div>
+                        <div class = "d-flex flex-row">
+                        <div class = "col mr-4 p-0">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body p-2">
+                                  <h5 class="card-title" id="Day1"></h5>
+                                  <p class="card-text cardicon"><img src="" alt="weather 1icon"></p>
+                                  <p class="card-text cardTemp">Temp: <span></span><span> &degF</span></p>
+                                  <p class="card-text cardHum">Humidity: <span></span>%</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class = "col mr-4 p-0">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body p-2">
+                                  <h5 class="card-title"  id="Day2"></h5>
+                                  <p class="card-text cardicon"><img src="" alt="weather 2icon"></p>
+                                  <p class="card-text cardTemp">Temp: <span></span><span> &degF</span></p>
+                                  <p class="card-text cardHum">Humidity: <span></span>%</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class = "col mr-4 p-0">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body p-2">
+                                  <h5 class="card-title"  id="Day3"></h5>
+                                  <p class="card-text cardicon"><img src="" alt="weather 3icon"></p>
+                                  <p class="card-text cardTemp">Temp: <span></span><span> &degF</span></p>
+                                  <p class="card-text cardHum">Humidity: <span></span>%</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class = "col mr-4 p-0">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body p-2">
+                                  <h5 class="card-title" id="Day4"></h5>
+                                    <p class="card-text cardicon"><img src="" alt="weather 4icon"></p>
+                                    <p class="card-text cardTemp">Temp: <span></span><span> &degF</span></p>
+                                    <p class="card-text cardHum">Humidity: <span></span>%</p>
+                                </div>
+                              </div>
+                        </div>
+                        <div class = "col mr-4 p-0">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body p-2">
+                                      <h5 class="card-title" id="Day5"></h5>
+                                      <p class="card-text cardicon"><img src="" alt="weather 5icon"></p>
+                                      <p class="card-text cardTemp">Temp: <span></span><span> &degF</span></p>
+                                      <p class="card-text cardHum">Humidity: <span></span>%</p>
+                                    </div>
+                                  </div>
+                        </div>
+                       </div>
+                   </div>
+                        </div>
+                   </div>
+                </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "script.js"></script>
+  </body>
+</html>
