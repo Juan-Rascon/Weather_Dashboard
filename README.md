@@ -12,4 +12,4 @@ During this project, I learned how to use AJAX and make API calls using an API t
 * Chrome's Dev Tools
 
 ## Sites used for reference
-*[CSS-Tricks](https://css-tricks.com/)
+* [https://jquery.com/](https://jquery.com/)
