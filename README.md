@@ -1,6 +1,6 @@
-# week6_hw
-Week 6 HW
+# Weather_Dashboard
 
+##Description
 This project involves retrieving data from another application's API and using it in the context of your website. In this homework assignment, I build a weather dashboard using the OpenWeather API.
 
 ## Learning Experience
